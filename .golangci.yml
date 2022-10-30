@@ -7,8 +7,6 @@ linters-settings:
     simplify: true
   goimports:
     local-prefixes: github.com/mattermost/mattermost-starter-template
-  golint:
-    min-confidence: 0
   govet:
     check-shadowing: true
     enable-all: true
@@ -26,7 +24,6 @@ linters:
     - gocritic
     - gofmt
     - goimports
-    - golint
     - gosec
     - gosimple
     - govet

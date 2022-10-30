@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  go-build:
+    build: .
+    volumes:
+      - ./:/src
+    environment:
+      MM_SERVICESETTINGS_SITEURL: ${MM_SERVICESETTINGS_SITEURL}
+      MM_ADMIN_TOKEN: ${MM_ADMIN_TOKEN}
+    command:
+      sh -c 'cd /src && make deploy'
